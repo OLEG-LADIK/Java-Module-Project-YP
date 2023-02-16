@@ -30,6 +30,7 @@ class Products {
     }
 
     double checkingIfValueIsNumber () {
+        while(true) {
         System.out.println("Введите цену товара в формате рубли,копейки");
         while (true) {
             if (scan.hasNextDouble()) {
@@ -39,8 +40,6 @@ class Products {
                 scan.next();
             }
         }
-
-        while(true) {
             price = scan.nextDouble();
             if (price <= 0) {
                 System.out.println("Цена блюда не может быть отрицательной и не может быть равна нулю");
