@@ -7,6 +7,7 @@ class Products {
     String[] dish =  new String[100];
     int i =0;
     double[] expense = new double[100];
+    double price = 0;
     double total = 0;
     double calculatingTotalExpense() {
         while (ifWantFinish) {
@@ -38,7 +39,16 @@ class Products {
                 scan.next();
             }
         }
-        return scan.nextDouble();
+
+        while(true) {
+            price = scan.nextDouble();
+            if (price <= 0) {
+                System.out.println("Цена блюда не может быть отрицательной и не может быть равна нулю");
+            } else {
+                break;
+            }
+        }
+        return price;
     }
 
 
